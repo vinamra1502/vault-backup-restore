@@ -5,7 +5,11 @@ It will recursively backup all secret from given path.
 input_path: please source path of secret
 
 ex: secret/tmp1
+
+
 output_path: destination path of secret
+
+
 ex: secret/tmp2
 
 
