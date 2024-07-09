@@ -15,7 +15,7 @@ class VaultCopy:
     def get_secret_formatted(self, _path):
         output = subprocess.run(["vault", "kv", "get", "-format=json", _path], stdout=subprocess.PIPE).stdout.decode("utf-8")
         kv=json.loads(output) if output else {}
-        _data = kv.get("data", {}).get("data", {})
+        _data = kv.get("data", {})
         return _data
 
     def create_json_file(self, json_data):
